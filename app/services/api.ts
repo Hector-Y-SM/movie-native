@@ -36,13 +36,14 @@ export const fetchMovieData = async ({ query }: {query : string}) => {
                         ? `${TMDB_CONFIG.BASE_URL}/movie/${encodeURIComponent(query)}?language=en-US` 
                         : `${TMDB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc`;
 
+    console.log('ress ', endpoint)
+    console.log('header ', TMDB_CONFIG.headers)
+
     const response = await fetch(endpoint, {
         method: 'GET',
         headers: TMDB_CONFIG.headers
     });
 
-    console.log('ress ', response)
-    console.log('header ', TMDB_CONFIG.headers)
     if (!response.ok) {
         throw new Error(`Failed to fetch movies: ${response.statusText}`);
     }

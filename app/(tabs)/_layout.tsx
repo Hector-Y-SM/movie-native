@@ -22,7 +22,7 @@ export default function RootLayout() {
     return (
       <View className="flex flex-column min-w-[112] justify-center items-center mt-4 min-h-16 rounded-full overflow-hidden">
         <Ionicons name={icon} size={20} color='#CEB490'/>
-        <Text className="color-[##CEB490]">{title}</Text>
+        <Text className="color-[#CEB490]">{title}</Text>
       </View>
     )
   }
@@ -31,12 +31,6 @@ export default function RootLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        //tabBarActiveTintColor: "#CEB490",
-        //tabBarInactiveTintColor: "#000000",
-        //tabBarActiveBackgroundColor: "#FF0000",
-        //tabBarInactiveBackgroundColor: "#FFFFFF",
-        //tabBarActiveBackgroundColor: "#FF0000",
-
         tabBarShowLabel: false,
         tabBarStyle: {
           backgroundColor: "#0F0D23",
@@ -60,22 +54,18 @@ export default function RootLayout() {
     <Tabs.Screen name="search" 
         options={{ 
             tabBarIcon: ({focused}: IconMenu) => (<TabBarIcon title="search" icon="search-outline" focused={focused}/>),
-            //tabBarIcon: ({ color, size }: { color: string; size: number }) => ( <Ionicons name="search-outline" color={color} size={size} />),
             }}/>
     <Tabs.Screen name="index" 
         options={{ 
             tabBarIcon: ({focused}: IconMenu) => (<TabBarIcon title="home" icon="home-outline" focused={focused}/>),
-            //tabBarIcon: ({ color, size }: { color: string; size: number }) => ( <Ionicons name="home-outline" color={color} size={size} />),
-        }}/>
+            }}/>
     <Tabs.Screen name="saved" 
         options={{ 
             tabBarIcon: ({focused}: IconMenu) => (<TabBarIcon title="saved" icon="bookmark-outline" focused={focused}/>),
-            //tabBarIcon: ({ color, size }: { color: string; size: number }) => ( <Ionicons name="bookmark-outline" color={color} size={size} />),
             }}/>
     <Tabs.Screen name="profile" 
         options={{ 
             tabBarIcon: ({focused}: IconMenu) => (<TabBarIcon title="profile" icon="person-outline" focused={focused}/>),
-            //tabBarIcon: ({ color, size }: { color: string; size: number }) => ( <Ionicons name="person-outline" color={color} size={size} />),
             }}/>
     </Tabs>
 )
