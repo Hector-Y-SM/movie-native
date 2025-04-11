@@ -36,6 +36,7 @@ export default function RootLayout() {
         //tabBarActiveBackgroundColor: "#FF0000",
         //tabBarInactiveBackgroundColor: "#FFFFFF",
         //tabBarActiveBackgroundColor: "#FF0000",
+
         tabBarShowLabel: false,
         tabBarStyle: {
           backgroundColor: "#0F0D23",
@@ -58,25 +59,21 @@ export default function RootLayout() {
     >
     <Tabs.Screen name="search" 
         options={{ 
-            title: "search", 
             tabBarIcon: ({focused}: IconMenu) => (<TabBarIcon title="search" icon="search-outline" focused={focused}/>),
             //tabBarIcon: ({ color, size }: { color: string; size: number }) => ( <Ionicons name="search-outline" color={color} size={size} />),
             }}/>
     <Tabs.Screen name="index" 
         options={{ 
-            title: "Home" ,
             tabBarIcon: ({focused}: IconMenu) => (<TabBarIcon title="home" icon="home-outline" focused={focused}/>),
             //tabBarIcon: ({ color, size }: { color: string; size: number }) => ( <Ionicons name="home-outline" color={color} size={size} />),
         }}/>
     <Tabs.Screen name="saved" 
         options={{ 
-            title: "Saved",
             tabBarIcon: ({focused}: IconMenu) => (<TabBarIcon title="saved" icon="bookmark-outline" focused={focused}/>),
             //tabBarIcon: ({ color, size }: { color: string; size: number }) => ( <Ionicons name="bookmark-outline" color={color} size={size} />),
             }}/>
     <Tabs.Screen name="profile" 
         options={{ 
-            title: "profile",
             tabBarIcon: ({focused}: IconMenu) => (<TabBarIcon title="profile" icon="person-outline" focused={focused}/>),
             //tabBarIcon: ({ color, size }: { color: string; size: number }) => ( <Ionicons name="person-outline" color={color} size={size} />),
             }}/>
