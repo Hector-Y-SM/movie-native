@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity, StyleSheet, } from 'react-native'
-import React, { useState } from 'react'
+import React from 'react'
 import type { Result } from '@/interfaces/tmdb.interface'
 import { useRouter } from "expo-router";
 import { Rating } from '@kolking/react-native-rating';
@@ -12,9 +12,8 @@ const MovieCard = ({
     release_date,
     vote_average
     }: Result) => {
-        const formattedDate = new Date(release_date).toISOString().slice(0, 7);
+        const formattedDate = new Date(release_date).toLocaleDateString();
         const router = useRouter();
-
         return (
             <View className='flex flex-1'>
                 <TouchableOpacity
